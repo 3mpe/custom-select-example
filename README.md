@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+## Projeyi Başlatma
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Bu projeyi kendi bilgisayarınızda çalıştırmak için aşağıdaki adımları takip edebilirsiniz.
 
-## Available Scripts
+### 1. Gerekli Araçlar
 
-In the project directory, you can run:
+Projenin çalışabilmesi için aşağıdaki araçların bilgisayarınızda kurulu olması gerekmektedir:
 
-### `npm start`
+- **Node.js**: React ve bağımlılıkları yüklemek için Node.js gereklidir. [Node.js İndir](https://nodejs.org/)
+- **npm veya yarn**: Proje bağımlılıklarını yönetmek için npm veya yarn kullanılabilir. Node.js ile birlikte npm gelir, ancak yarn'ı ayrı olarak yüklemeniz gerekebilir. [Yarn İndir](https://yarnpkg.com/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 2. Projeyi İndirme
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Projenin bulunduğu depoyu (repository) indirin veya klonlayın. Eğer proje GitHub üzerinde barınıyorsa, terminal üzerinden şu komutla klonlayabilirsiniz:
 
-### `npm test`
+```bash
+git clone https://github.com/username/project-name.git
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Select Component Özellikleri ve Yapılan Güncellemeler
 
-### `npm run build`
+Bu doküman, `Select` komponentinin özelliklerini ve yapılan güncellemeleri açıklamaktadır.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Yapılan Özellikler
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 1. Dropdown Menüsü
+Kullanıcı input alanına tıkladığında, dropdown menüsü açılır. (Focus olayına bağlıdır). Bu sayede kullanıcı daha kolay seçenekler arasında seçim yapabilir.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 2. Dışarıya Tıklanma
+Kullanıcı, dropdown menüsü veya input dışına tıkladığında dropdown kapanır. Bu özellik, `mousedown` eventi ile dinleniyor ve dışarıya tıklanması durumunda dropdown'un kapanmasını sağlar.
 
-### `npm run eject`
+### 3. Yeni Item Ekleme
+Arama kutusuna yazılan ve mevcut seçenekler arasında bulunmayan bir seçenek eklenebilir. Eğer arama kutusuna yazılan kelime mevcut seçeneklerde yer almıyorsa, kullanıcıya "Add" butonu ile yeni bir öğe ekleme seçeneği sunulur.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 4. Tüm Seçenekleri Seçme
+Kullanıcı `Ctrl + A` tuşlarına basarak tüm seçenekleri seçebilir veya seçimlerini kaldırabilir. Bu özellik sadece dropdown açıkken çalışır! 
+- **Not:** `Ctrl + A` işlevi, dropdown menüsü açıkken etkinleşir. Eğer dropdown kapalıysa, bu işlev çalışmaz.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 5. Seçilen Elemanlar
+Seçilen elemanlar, input alanında küçük etiketler olarak görünür. Kullanıcı bu etiketleri tıklayarak seçimden çıkarabilir. Bu etiketler, seçilen öğeleri kolayca yönetmeyi sağlar.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 6. Otomatik Filtreleme
+Kullanıcı arama kutusuna yazdıkça, seçenekler filtrelenir ve yalnızca eşleşen öğeler gösterilir. Bu sayede kullanıcı sadece ihtiyacı olan seçenekleri görür.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Kullanılan Teknolojiler ve Teknikler
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **React**: Kullanıcı arayüzünü oluşturmak için.
+- **useState, useEffect, useMemo, useCallback**: React Hook'ları kullanılarak component state yönetimi ve performans optimizasyonları yapıldı.
+- **aria-label ve role özellikleri**: Erişilebilirlik (Accessibility) amacıyla, kullanıcıların ekran okuyucularını daha verimli kullanabilmesi için eklendi.
+- **Keyboard Event Handling**: `Ctrl + A` tuş kombinasyonu ile tüm seçeneklerin seçilmesi için klavye olayları kullanıldı.
