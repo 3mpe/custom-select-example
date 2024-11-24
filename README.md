@@ -14,7 +14,7 @@ Projenin çalışabilmesi için aşağıdaki araçların bilgisayarınızda kuru
 Projenin bulunduğu depoyu (repository) indirin veya klonlayın. Eğer proje GitHub üzerinde barınıyorsa, terminal üzerinden şu komutla klonlayabilirsiniz:
 
 ```bash
-git clone https://github.com/username/project-name.git
+git clone https://github.com/3mpe/custom-select-example
 ```
 
 # Select Component Özellikleri ve Yapılan Güncellemeler
